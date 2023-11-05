@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=News+Cycle:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.polaroid {
+    position: relative;
+
+    background: #FFFFFF;
+    max-width: 400px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+
+}
+
+.form {
+    position: relative;
+    background: #ead5c6;
+    max-width: 400px;
+    margin: 0 auto 50px;
+    padding: 45px;
+    text-align: center;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #af9cb1;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+
+.form .register-form {
+    display: none;
+}
+
+.form-create-character {
+    position: relative;
+    background: #ead5c6;
+    margin: 0 auto 50px;
+    padding: 45px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container .info {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+.container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+.container .info span a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container .info span .fa {
+    color: #EF3B3A;
+}
+
+body {
+    background: #b7bdc9;
+    /* fallback for old browsers */
+    background: rgb(183, 189, 201);
+    background: linear-gradient(90deg, rgba(183, 189, 201) 0%, rgba(183, 189, 201) 50%);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    height: 100px;
+    background-color: #5b86ae;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-weight: 700;
+
+}
+
+
+
+
+.header-center {
+    padding-left: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-right {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    border: 0;
+    background-color: #b7bdc9;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 200px;
+    padding: 10px 0;
+
+    transition: 0.4s;
+
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    text-align: center;
+
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    color: #a0c3d2;
+    background-color: rgb(193, 230, 235);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    background-color: red;
+    color: white;
+    padding: 0 0 0 20px;
+    width: 50%;
+}
+
+ul {
+    list-style: none;
+    width: 50%;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.social-img {
+    width: 32px;
+    margin: 10px;
+}
+
+.contenedor-imagenes {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+
+
+.contenedor-imagenes img {
+
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+
+.personajes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.personaje {
+    width: 18%;
+    height: 650px;
+    background-color: #b7bdc9;
+    margin-bottom: 50px;
+}
+
+.personaje_title {
+    color: #866475;
+    background-color: #ead5c6;
+    font-size: 28px;
+    text-align: center;
+}
+
+.personaje_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login {
+    width: 50%;
+    background-color: aqua;
+
+    text-align: center;
+}
+
+.login div {
+    width: 50%
+}
+
+.show-modal:hover,
+.show-modal:focus {
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.btn {
+    background-color: #cf9e76;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.popup {
+
+    background-color: #4d4d4d8c;
+
+    width: 100%;
+    height: 150%;
+
+    position: absolute;
+    visibility: hidden;
+    z-index: 105;
+}
+
+.popup-login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+}
+
+.icon {
+    width: 25%
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row {
+    display: table;
+    clear: both;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+    visibility: visible;
+}
+
+.btn-crear {
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: teal;
+    color: white;
+    height: 15%;
+    position: fixed;
+    margin-right: 5%;
+    right: 0%;
+    bottom: 10%;
+}
+
+.blank {
+
+    background-color: transparent;
+}
+
+@media screen and (max-width:625px) {
+
+    .personaje {
+        width: 80%;
+        height: 400px;
+        margin-bottom: 25px;
+    }
+
+    .contenedor-imagenes {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contenedor-imagenes img {
+        height: 70%;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: 101;
+    }
+}

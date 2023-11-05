@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Proyecto Fullstack</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src='js/index.js'></script>
+    <script src='js/login.js'></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-center">
+            <h1>The Wears Tour</h1>
+        </div>
+        <h2 class="btn log" onclick="showLogin()">Iniciar Sesión</button>
+
+
+    </header>
+
+    <div class="popup" id="popupLogin">
+        <div class="popup-login">
+            <div class="login-form">
+                <div class="polaroid">
+                    <div class="form">
+                        <form name="login-form" class="login-form">
+
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="" id="inputEmail" aria-describedby="emailHelp">
+
+                            <label for="inputPassword">Contraseña</label>
+                            <input type="password" class="l" id="inputPassword">
+
+                            <button type="button" class="btn btn-primary" onclick="login()">Ingresar</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Los últimos personajes creados por la comunidad</h2>
+        <div class="personajes" id="personajes_id">
+            <div class="personajes" id="personajes_id"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="contact">
+            <p>Dirección: Mario Bravo 1050</p>
+            <p>Telefono</p>
+            <p>Mail</p>
+        </div>
+        <ul>
+
+        </ul>
+    </footer>
+
+</body>
+
+</html>

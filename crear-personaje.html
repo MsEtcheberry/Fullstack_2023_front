@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Crear personaje</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/create-character.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src='js/login.js'></script>
+    <script src='js/crear-personaje.js'></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-center">
+            <h1>The wears Tour</h1>
+        </div>
+
+
+    </header>
+    <div class="row">
+        <div class="column">
+            <p>Vista previa del personaje</p>
+
+            <label for="inputCharacterName">Nombre del personaje </label>
+            <input type="text" class="" id="inputCharacterName" />
+            <div class="personaje">
+                <div id="character-in-process" class="contenedor-imagenes">
+
+                </div>
+            </div>
+            <button onclick="saveCharacter()">Guardar nuevo personaje</button>
+
+        </div>
+
+        <div class="column">
+            <div class="form-border">
+
+                <div class="polaroid">
+                    <div class="form-create-character">
+                        <form name="login-form" class="login-form">
+
+                            <p>Personaje:</p>
+                            <div id="icons" class="icons">
+
+                            </div>
+                            <p>Ropa superior:</p>
+                            <div id="upper-clothing" class="icons">
+
+                            </div>
+                            <p>Ropa inferior:</p>
+                            <div id="bottom-clothing" class="icons">
+
+                            </div>
+                            <p>Zapatos:</p>
+                            <div id="shoes-clothing" class="icons">
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <footer>
+        <div class="contact">
+            <p>Dirección: Mario Bravo 1050</p>
+            <p>Telefono</p>
+            <p>Mail</p>
+        </div>
+        <ul>
+
+        </ul>
+    </footer>
+
+</body>
+
+</html>
