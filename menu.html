@@ -20,21 +20,21 @@
             <img id="header-logo-index" class="header-logo" src="imgs/assets/logo.JPG" onmouseover="showHeaderGif()"
                 onmouseout="removeHeaderGif()" onclick="navigateMain()">
         </div>
-
+        <h2 id="header-btn-login" class="btn log" onclick="closeSession()">Cerrar Sesión</button>
     </header>
+
     <button class="btn-crear w3-button w3-circle w3-teal" onclick="crearPersonaje()">Crear nuevo personaje</button>
     <div class="content" id="Subheader">
         <h4>Tus últimos personajes...</h2>
             <ul class="paginator" id="paginator">
-                <li class="paginator-btn"><a onclick="previusPage()">Previos</a></li>
-                <li class="paginator-btn"><a onclick="nextPage()">Siguientes</a></li>
+                <li class="paginator-btn" id="paginator-btn-previus" style="visibility:hidden;"><a
+                        onclick="previusPage()">Previos</a></li>
+                <li class="paginator-btn" id="paginator-btn-next"><a onclick="nextPage()">Siguientes</a></li>
             </ul>
             <div class="personajes" id="personajes_id">
                 <div class="personajes" id="personajes_id"></div>
             </div>
     </div>
-
-
 </body>
 
 </html>
