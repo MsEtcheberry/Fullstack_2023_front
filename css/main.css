@@ -3,6 +3,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+body {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .login {
     width: 360px;
     padding: 8% 0 0;
@@ -122,15 +128,7 @@
     color: #EF3B3A;
 }
 
-body {
-    background: #b7bdc9;
-    /* fallback for old browsers */
-    background: rgb(183, 189, 201);
-    background: linear-gradient(90deg, rgba(183, 189, 201) 0%, rgba(183, 189, 201) 50%);
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 
 header {
     height: 100px;
@@ -150,13 +148,21 @@ h1 {
 
 }
 
-
+#login-error-message {
+    color: red;
+    visibility: hidden;
+    margin: 0;
+}
 
 
 .header-center {
     padding-left: 20px;
     flex-direction: row;
     justify-content: center;
+}
+
+.header-logo {
+    width: 300px;
 }
 
 .header-right {
@@ -203,6 +209,7 @@ footer {
     width: 50%;
 }
 
+
 ul {
     list-style: none;
     width: 50%;
@@ -215,13 +222,26 @@ li {
     padding: 5px 0;
 }
 
-.social-img {
-    width: 32px;
-    margin: 10px;
+
+.paginator {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
+.paginator-btn {
+    color: #a0c3d2;
+
+    width: 70px;
+    display: block;
+    background-color: #cf9e76;
+    padding: 10px 10px 10px 10px;
+}
+
+
 .contenedor-imagenes {
-    height: 100%;
+    height: 550px;
     position: relative;
     width: 100%;
 }
@@ -249,16 +269,20 @@ li {
 
 .personaje {
     width: 18%;
-    height: 650px;
+    height: auto;
     background-color: #b7bdc9;
     margin-bottom: 50px;
+    vertical-align: middle;
 }
 
 .personaje_title {
     color: #866475;
     background-color: #ead5c6;
+    overflow: hidden;
     font-size: 28px;
+    height: 75px;
     text-align: center;
+    margin: 0;
 }
 
 .personaje_img {
@@ -302,7 +326,7 @@ li {
     background-color: #4d4d4d8c;
 
     width: 100%;
-    height: 150%;
+    height: 100%;
 
     position: absolute;
     visibility: hidden;
@@ -345,6 +369,7 @@ li {
     margin-right: 5%;
     right: 0%;
     bottom: 10%;
+    z-index: 103;
 }
 
 .blank {
@@ -352,25 +377,26 @@ li {
     background-color: transparent;
 }
 
-@media screen and (max-width:625px) {
+@media screen and (max-width:500px) {
 
     .personaje {
-        width: 80%;
-        height: 400px;
+        width: 100%;
+        height: auto;
         margin-bottom: 25px;
     }
 
     .contenedor-imagenes {
+        height: 100%;
         text-align: center;
         align-items: center;
     }
 
     .contenedor-imagenes img {
-        height: 70%;
-        width: auto;
+        height: 100%;
+        width: 100%;
         position: absolute;
         top: 0;
-        left: 15%;
+
         z-index: 101;
     }
 }

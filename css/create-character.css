@@ -15,6 +15,14 @@ header {
     justify-content: center;
 }
 
+.header-logo {
+    width: 300px;
+}
+
+.header-logo:hover img {
+    src: url("imgs/assets/animated-logo.GIF");
+}
+
 body {
     background-color: rgb(193, 230, 235);
 }
@@ -94,6 +102,7 @@ h1 {
     height: 850px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px 0;
     color: #a0c3d2;
@@ -103,6 +112,7 @@ h1 {
 
 .personaje {
     display: block;
+    align-self: flex-start;
     width: 65%;
     height: 100%;
     margin-bottom: 50px;
@@ -134,7 +144,34 @@ h1 {
 }
 
 .polaroid {
-    margin: 2% 2% 10% 2%;
+    margin: 5% 2% 10% 2%;
     background-color: beige;
     text-align: start;
+}
+
+.input-create {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 50%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+.form-header {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 0 0 20px;
+}
+
+.input-create:invalid {
+    border-color: red
+}
+
+.column form {
+    display: contents;
 }
