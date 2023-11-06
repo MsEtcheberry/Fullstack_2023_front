@@ -51,7 +51,16 @@ h1 {
 
 }
 
+.btn-create {
 
+    color: #ffffff;
+
+    width: 25%;
+    display: block;
+    background-color: #cf9e76;
+    padding: 10px 10px 10px 10px;
+    border: 0
+}
 
 .icon {
     width: 100%
@@ -174,4 +183,59 @@ h1 {
 
 .column form {
     display: contents;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .header-center {
+        width: 100%;
+    }
+
+    .header-logo {
+        width: 100%
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .personaje {
+        width: 100%;
+        height: auto;
+    }
+
+    .column {
+        flex: none;
+        width: 100%
+    }
+
+    .preview {
+        height: auto;
+    }
+
+    .contenedor-imagenes {
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .form-create-container {
+        flex: auto;
+    }
+
+    .form-border {
+        margin: 0;
+    }
+
+    #character-in-process img {
+
+        height: 50vh;
+        width: auto;
+        left: 15%;
+    }
+
+    .btn-create {
+        width: 50%;
+    }
 }

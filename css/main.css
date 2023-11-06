@@ -7,6 +7,7 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 8px;
 }
 
 .login {
@@ -17,7 +18,6 @@ body {
 
 .polaroid {
     position: relative;
-
     background: #FFFFFF;
     max-width: 400px;
     margin: 0 auto 100px;
@@ -93,42 +93,6 @@ body {
     max-width: 300px;
     margin: 0 auto;
 }
-
-.container:before,
-.container:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.container .info {
-    margin: 50px auto;
-    text-align: center;
-}
-
-.container .info h1 {
-    margin: 0 0 15px;
-    padding: 0;
-    font-size: 36px;
-    font-weight: 300;
-    color: #1a1a1a;
-}
-
-.container .info span {
-    color: #4d4d4d;
-    font-size: 12px;
-}
-
-.container .info span a {
-    color: #000000;
-    text-decoration: none;
-}
-
-.container .info span .fa {
-    color: #EF3B3A;
-}
-
-
 
 header {
     height: 100px;
@@ -231,7 +195,7 @@ li {
 }
 
 .paginator-btn {
-    color: #a0c3d2;
+    color: #ffffff;
 
     width: 70px;
     display: block;
@@ -377,6 +341,10 @@ li {
     background-color: transparent;
 }
 
+h4 {
+    margin: 0;
+}
+
 @media screen and (max-width:500px) {
 
     .personaje {
@@ -386,17 +354,32 @@ li {
     }
 
     .contenedor-imagenes {
-        height: 100%;
+        height: 400px;
         text-align: center;
         align-items: center;
     }
 
     .contenedor-imagenes img {
         height: 100%;
-        width: 100%;
+        width: auto;
         position: absolute;
         top: 0;
+        left: 10%;
 
         z-index: 101;
+    }
+
+    .header-center {
+        width: 70%;
+        padding-left: 10%;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .log {
+        width: 30%;
+        height: auto;
     }
 }
