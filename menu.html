@@ -7,7 +7,7 @@
     <title>The Wears Tour</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-
+    <link rel="icon" type="image/png" href="imgs/assets/favicon.ico">
     <script src="js/login.js"></script>
     <script src='js/menu.js'></script>
 
@@ -17,31 +17,24 @@
 <body>
     <header>
         <div class="header-center">
-            <h1>
-                <a class="blank" href="index.html">The wears Tour</a>
-            </h1>
+            <img id="header-logo-index" class="header-logo" src="imgs/assets/logo.JPG" onmouseover="showHeaderGif()"
+                onmouseout="removeHeaderGif()" onclick="navigateMain()">
         </div>
 
     </header>
     <button class="btn-crear w3-button w3-circle w3-teal" onclick="crearPersonaje()">Crear nuevo personaje</button>
     <div class="content" id="Subheader">
-        <h2>Tus últimos personajes...</h2>
-        <div class="personajes" id="personajes_id">
-            <div class="personajes" id="personajes_id"></div>
-        </div>
+        <h4>Tus últimos personajes...</h2>
+            <ul class="paginator" id="paginator">
+                <li class="paginator-btn"><a onclick="previusPage()">Previos</a></li>
+                <li class="paginator-btn"><a onclick="nextPage()">Siguientes</a></li>
+            </ul>
+            <div class="personajes" id="personajes_id">
+                <div class="personajes" id="personajes_id"></div>
+            </div>
     </div>
 
-    <footer>
-        <div class="contact">
-            <p>Dirección: Mario Bravo 1050</p>
-            <p>Telefono</p>
-            <p>Mail</p>
-        </div>
-        <ul>
 
-        </ul>
-    </footer>
-    </div>
 </body>
 
 </html>

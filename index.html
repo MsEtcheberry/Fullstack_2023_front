@@ -7,6 +7,7 @@
     <title>Proyecto Fullstack</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="icon" type="image/png" href="imgs/assets/favicon.ico">
     <script src='js/index.js'></script>
     <script src='js/login.js'></script>
 </head>
@@ -14,9 +15,10 @@
 <body>
     <header>
         <div class="header-center">
-            <h1>The Wears Tour</h1>
+            <img id="header-logo-index" class="header-logo" src="imgs/assets/logo.JPG" onmouseover="showHeaderGif()"
+                onmouseout="removeHeaderGif()">
         </div>
-        <h2 class="btn log" onclick="showLogin()">Iniciar Sesión</button>
+        <h2 id="header-btn-login" class="btn log" onclick="showLogin()">Iniciar Sesión</button>
 
 
     </header>
@@ -33,8 +35,9 @@
 
                             <label for="inputPassword">Contraseña</label>
                             <input type="password" class="l" id="inputPassword">
-
                             <button type="button" class="btn btn-primary" onclick="login()">Ingresar</button>
+                            <h3 id="login-error-message">Email o contraseña incorrectos</h3>
+
                         </form>
                     </div>
 
@@ -48,16 +51,6 @@
             <div class="personajes" id="personajes_id"></div>
         </div>
     </div>
-    <footer>
-        <div class="contact">
-            <p>Dirección: Mario Bravo 1050</p>
-            <p>Telefono</p>
-            <p>Mail</p>
-        </div>
-        <ul>
-
-        </ul>
-    </footer>
 
 </body>
 

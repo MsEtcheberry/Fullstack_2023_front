@@ -7,32 +7,33 @@
     <title>Crear personaje</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/create-character.css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <link rel="icon" type="image/png" href="imgs/assets/favicon.ico">
     <script src='js/login.js'></script>
     <script src='js/crear-personaje.js'></script>
+
 </head>
 
 <body>
     <header>
         <div class="header-center">
-            <h1>The wears Tour</h1>
+            <img id="header-logo-index" class="header-logo" src="imgs/assets/logo.JPG" onmouseover="showHeaderGif()"
+                onmouseout="removeHeaderGif()" onclick="navigateMain()">
         </div>
-
-
     </header>
+
     <div class="row">
         <div class="column">
-            <p>Vista previa del personaje</p>
 
-            <label for="inputCharacterName">Nombre del personaje </label>
-            <input type="text" class="" id="inputCharacterName" />
+            <label for=" inputCharacterName">Nombre del personaje </label>
+            <input type="text" class="input-create" id="inputCharacterName" required />
+            <button onclick="saveCharacter()">Guardar nuevo personaje</button>
+
             <div class="personaje">
                 <div id="character-in-process" class="contenedor-imagenes">
 
                 </div>
             </div>
-            <button onclick="saveCharacter()">Guardar nuevo personaje</button>
+
 
         </div>
 
@@ -41,9 +42,9 @@
 
                 <div class="polaroid">
                     <div class="form-create-character">
-                        <form name="login-form" class="login-form">
+                        <form name="create-form">
 
-                            <p>Personaje:</p>
+                            <p class="form-header">Personaje:</p>
                             <div id="icons" class="icons">
 
                             </div>
@@ -66,20 +67,7 @@
             </div>
         </div>
     </div>
-
-
     </div>
-    <footer>
-        <div class="contact">
-            <p>Dirección: Mario Bravo 1050</p>
-            <p>Telefono</p>
-            <p>Mail</p>
-        </div>
-        <ul>
-
-        </ul>
-    </footer>
-
 </body>
 
 </html>
