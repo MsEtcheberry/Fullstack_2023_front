@@ -1,12 +1,8 @@
 
 var userData
 async function login() {
-    console.log("HOLA")
     email = document.getElementById("inputEmail").value;
     password = document.getElementById("inputPassword").value;
-
-    console.log(email);
-    console.log(password);
 
     await fetch('http://localhost:8080/auth/login', {
         method: "POST",
@@ -17,10 +13,9 @@ async function login() {
         },
         body: JSON.stringify({ email: email, password: password })
     }).then(response => {
-        console.log(response.body)
+
         response.json().then(result => {
 
-            console.log("result: " & result)
             if (response.status == 401) {
                 document.getElementById("login-error-message").style.visibility = "visible"
             } else {

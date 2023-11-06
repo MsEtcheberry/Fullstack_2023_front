@@ -1,7 +1,7 @@
 
 const userId = sessionStorage.getItem('userId');
 const token = sessionStorage.getItem('token');
-console.log(token)
+
 let upperClothing;
 let bottomClothing;
 let baseCharacters;
@@ -16,7 +16,10 @@ let selectedShoes;
 document.addEventListener("DOMContentLoaded", async function () {
     contenedor = document.getElementById("personajes_id");
 
+    if (!userId) {
+        window.location.href = "index.html"
 
+    }
 
     await fetch(`http://localhost:8080/clothing/BASE_CHARACTER`)
         .then(response => response.json())
@@ -61,7 +64,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         .catch(err => console.log(err))
 
     function loadDefaultCharacter(item, id) {
-        console.log(item);
         const card =
             `<img id="${id}" src="${item.imgUrl}" class="personaje_img">`
         document.getElementById("character-in-process").insertAdjacentHTML('beforeend', card);
@@ -107,15 +109,11 @@ function loadIcon(baseCharacter) {
 
 function setBaseCharacter(itemId) {
     selectedBase = baseCharacters.find((character) => itemId === character.id)
-    console.log(selectedBase)
-
     document.getElementById("character-base").src = selectedBase.imgUrl
-
 }
 
 function selectClothing(clothingId) {
     let selected = allClothing.find(clothing => clothing.id == clothingId)
-    console.log(selected)
     switch (selected.type) {
         case "UPPER": {
             selectedUpper = selected;
@@ -138,7 +136,6 @@ function selectClothing(clothingId) {
 
 async function saveCharacter() {
     let characterName = document.getElementById("inputCharacterName").value;
-    console.log(token)
     if (characterName != "") {
         await fetch('http://localhost:8080/characters', {
             method: "POST",
@@ -157,10 +154,7 @@ async function saveCharacter() {
                 shoes: selectedShoes
             })
         }).then(response => {
-            console.log(response)
             response.json().then(result => {
-
-                console.log(result)
                 switch (response.status) {
                     case 409: {
                         alert("Ya existe un personaje con este nombre.")
@@ -195,7 +189,6 @@ async function saveCharacter() {
 }
 
 function showHeaderGif() {
-    console.log("aaa")
     document.getElementById("header-logo-index").src = "imgs/assets/animated-logo.GIF"
 }
 

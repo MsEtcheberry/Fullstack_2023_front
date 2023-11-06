@@ -1,6 +1,5 @@
 
 let userId = sessionStorage.getItem('userId')
-console.log(userId)
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function displayCharacters(character) {
-        console.log(character);
         const card =
             `<div class="personaje">
             <p class="personaje_title">
@@ -44,7 +42,6 @@ function showLogin() {
 }
 
 function showHeaderGif() {
-    console.log("aaa")
     document.getElementById("header-logo-index").src = "imgs/assets/animated-logo.GIF"
 }
 

@@ -1,20 +1,22 @@
-console.log("hola mundo!")
-
 const userId = sessionStorage.getItem('userId');
 const token = sessionStorage.getItem('token');
-console.log(userId)
 
 let limit = 5
 let offset = 0
+let cantPersonajes
 
 
 document.addEventListener("DOMContentLoaded", function () {
     contenedor = document.getElementById("personajes_id");
+
+    if (!userId) {
+        window.location.href = "index.html"
+
+    }
     fetch(`http://localhost:8080/users/${userId}`)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
-            darBienvenida(result)
+            welcomeUser(result)
         })
         .catch(err => console.log(err))
 
@@ -22,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 })
-function darBienvenida(user) {
-    console.log(user)
+function welcomeUser(user) {
     const texto = `<h2>¡Bienvenid@ ${user.nickname}!</h2>`
     document.getElementById("Subheader").insertAdjacentHTML("afterBegin", texto);
 
@@ -34,27 +35,37 @@ function crearPersonaje() {
 }
 
 const previusPage = async () => {
+    document.getElementById("paginator-btn-next").style.visibility = "visible";
     offset -= limit
-    getCharacters()
+    await getCharacters()
+    if (offset <= 0) {
+        document.getElementById("paginator-btn-previus").style.visibility = "hidden";
+
+    }
 }
 
-const nextPage = async () => {
-
+async function nextPage() {
+    document.getElementById("paginator-btn-previus").style.visibility = "visible";
+    document.getElementById("paginator-btn-next").style.visibility = "visible";
     offset += limit
-    console.log(offset)
-    getCharacters()
+    await getCharacters()
+    if (cantPersonajes < 5) {
+        document.getElementById("paginator-btn-next").style.visibility = "hidden";
+    }
 }
 
 async function getCharacters() {
     document.getElementById("personajes_id").innerHTML = ''
     fetch(`http://localhost:8080/users/${userId}/characters?limit=${limit}&offset=${offset}`)
         .then(response => response.json())
-        .then(json => json.forEach(displayCharacters))
+        .then(json => {
+            json.forEach(displayCharacters)
+            cantPersonajes = json.length
+        })
         .catch(err => console.log(err, err));
 
 }
 function displayCharacters(character) {
-    console.log(character);
     const card =
         `<div class="personaje">
         <p class="personaje_title">
@@ -70,10 +81,14 @@ function displayCharacters(character) {
     document.getElementById("personajes_id").insertAdjacentHTML('beforeend', card);
 }
 function showHeaderGif() {
-    console.log("aaa")
     document.getElementById("header-logo-index").src = "imgs/assets/animated-logo.GIF"
 }
 
 function removeHeaderGif() {
     document.getElementById("header-logo-index").src = "imgs/assets/logo.JPG"
+}
+
+function closeSession() {
+    sessionStorage.clear()
+    window.location.href = "index.html"
 }
