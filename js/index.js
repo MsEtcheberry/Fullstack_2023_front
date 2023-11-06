@@ -1,9 +1,13 @@
-console.log("hola mundo!")
 
-let perros = ["Caniche", "Labrador", "Collie", "Akita"] // se crea una lista de elementos
-console.log(perros)
+let userId = sessionStorage.getItem('userId')
+console.log(userId)
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    if (userId) {
+        document.getElementById("header-btn-login").innerHTML = "Mi cuenta"
+    }
+
     contenedor = document.getElementById("personajes_id");
     fetch('http://localhost:8080/characters')
         .then(response => response.json())  // convertir a json
@@ -19,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
             ${character.displayName}
             </p>
             <div class="contenedor-imagenes">
-                <img src="${character.baseCharacter.imgUrl}" class="personaje_img">
-                <img src="${character.upperClothing.imgUrl}" class="personaje_img">
-                <img src="${character.bottomClothing.imgUrl}" class="personaje_img">
-                <img src="${character.shoes.imgUrl}" class="personaje_img">
+                <img src="${character.baseCharacter.imgUrl}" class="personaje_img" onerror="this.style.display='none'">
+                <img src="${character.upperClothing.imgUrl}" class="personaje_img" onerror="this.style.display='none'">
+                <img src="${character.bottomClothing.imgUrl}" class="personaje_img" onerror="this.style.display='none'">
+                <img src="${character.shoes.imgUrl}" class="personaje_img" onerror="this.style.display='none'">
             </div>
         </div>`
         document.getElementById("personajes_id").insertAdjacentHTML('beforeend', card);
@@ -30,9 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 function showLogin() {
-    console.log("Holaaaa")
-    var popup = document.getElementById("popupLogin");
+    if (!userId) {
+        var popup = document.getElementById("popupLogin");
+        popup.classList.toggle("show");
+    } else {
+        window.location.href = "menu.html"
+    }
 
-    popup.classList.toggle("show");
+}
+
+function showHeaderGif() {
+    console.log("aaa")
+    document.getElementById("header-logo-index").src = "imgs/assets/animated-logo.GIF"
+}
+
+function removeHeaderGif() {
+    document.getElementById("header-logo-index").src = "imgs/assets/logo.JPG"
 }
 

@@ -22,11 +22,11 @@ async function login() {
 
             console.log("result: " & result)
             if (response.status == 401) {
-                alert("Datos incorrectos")
+                document.getElementById("login-error-message").style.visibility = "visible"
             } else {
-                console.log(result.data)
-                localStorage.setItem('userId', result.data.userId)
-                localStorage.setItem('token', result.data.token)
+                document.getElementById("login-error-message").style.visibility = "hidden"
+                sessionStorage.setItem('userId', result.data.userId)
+                sessionStorage.setItem('token', result.data.token)
                 window.location.href = "menu.html"
                 return true
             }
@@ -35,7 +35,7 @@ async function login() {
 
 }
 
-function user() {
-    console.log("1 - " & userData)
-    return userData
+function navigateMain() {
+    window.location.href = "index.html"
+
 }
