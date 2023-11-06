@@ -17,3 +17,8 @@ Utilizado para ejecutar los siguientes tipos de funciones:
 
 ## Servidor:
 Consume la API REST del siguiente repositorio: https://github.com/MsEtcheberry/Fullstack_web2023.git
+
+### Credenciales de usuarios de prueba
+
+1) email: mail@gmail.com Pass: 1234567
+2) email: mail2@gmail.com Pass: 1234567
